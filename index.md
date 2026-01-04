@@ -6,7 +6,7 @@ title: Home
 <section class="section container">
   <h2>About</h2>
   <p>
-    I am a senior IT and cybersecurity leader with 10+ years of experience designing secure
+    I am a senior IT and cybersecurity leader with 20+ years of experience designing secure
     cloud-first programs, modernizing enterprise identity, and enabling resilient digital
     operations. My focus spans cloud architecture, zero trust strategy, AI-enabled automation,
     and building high-performing security teams that scale globally.
@@ -29,8 +29,8 @@ title: Home
       <p>Modern SOC enablement, threat detection engineering, and incident response optimization.</p>
     </article>
     <article class="card">
-      <h3>Automation & AI</h3>
-      <p>Workflow automation with PowerShell, Python, and AI copilots to reduce toil and boost resilience.</p>
+      <h3>Automation & Artificial Intelligence (AI)</h3>
+      <p>Extensive experience with Workflow automation to streamline IT operations and automate mundane tasks that were previously completed manually.</p>
     </article>
   </div>
 </section>
