@@ -29,8 +29,8 @@ title: Home
       <p>Modern SOC enablement, threat detection engineering, and incident response optimization.</p>
     </article>
     <article class="card">
-      <h3>Automation & AI</h3>
-      <p>Workflow automation with PowerShell, Python, and AI copilots to reduce toil and boost resilience.</p>
+      <h3>Automation & Artificial Intelligence (AI)</h3>
+      <p>Extensive experience with Workflow automation to streamline IT operations and automate mundane tasks that were previously completed manually.</p>
     </article>
   </div>
 </section>
