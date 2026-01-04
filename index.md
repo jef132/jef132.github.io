@@ -6,7 +6,7 @@ title: Home
 <section class="section container">
   <h2>About</h2>
   <p>
-    I am a senior IT and cybersecurity leader with 10+ years of experience designing secure
+    I am a senior IT and cybersecurity leader with 20+ years of experience designing secure
     cloud-first programs, modernizing enterprise identity, and enabling resilient digital
     operations. My focus spans cloud architecture, zero trust strategy, AI-enabled automation,
     and building high-performing security teams that scale globally.
