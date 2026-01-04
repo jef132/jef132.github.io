@@ -42,9 +42,4 @@ title: Home
     <li>Enterprise cybersecurity strategy aligned to business transformation and regulatory needs.</li>
     <li>Experienced leader for global teams across IT, security, and cloud operations.</li>
   </ul>
-  <p class="section-link">
-    <a href="https://www.youracclaim.com/users/jef-aldrich/badges" target="_blank" rel="noreferrer">
-      View my certifications
-    </a>
-  </p>
 </section>

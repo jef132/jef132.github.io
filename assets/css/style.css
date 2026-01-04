@@ -104,6 +104,7 @@ main {
   margin-bottom: 1rem;
 }
 
+<<<<<<< HEAD
 .section-link {
   margin-top: 1rem;
   font-weight: 600;
@@ -117,6 +118,8 @@ main {
   color: var(--accent-dark);
 }
 
+=======
+>>>>>>> main
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
