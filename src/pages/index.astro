@@ -262,6 +262,60 @@ import Layout from '../layouts/Layout.astro';
             <p class="cert-sub">UT Austin McCombs School of Business &middot; 2026</p>
           </div>
         </div>
+
+        <a
+          href="https://learn.microsoft.com/en-us/users/jef-a/credentials/5e592c0ebbd33203"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cert-card cert-card-wide reveal reveal-delay-3"
+        >
+          <div class="cert-badge cert-azure">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Microsoft Certified: Azure Security Engineer Associate</h3>
+            <p class="cert-sub">Microsoft &middot; <span class="cert-view">View Credential ↗</span></p>
+          </div>
+        </a>
+
+        <a
+          href="https://learn.microsoft.com/en-us/users/jef-a/credentials/52b230f2b3883cd7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cert-card cert-card-wide reveal reveal-delay-1"
+        >
+          <div class="cert-badge cert-azure">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+              <line x1="12" y1="22" x2="12" y2="15.5"/>
+              <polyline points="22 8.5 12 15.5 2 8.5"/>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Microsoft Certified: Azure Solutions Architect Expert</h3>
+            <p class="cert-sub">Microsoft &middot; <span class="cert-view">View Credential ↗</span></p>
+          </div>
+        </a>
+
+        <a
+          href="https://learn.microsoft.com/en-us/users/jef-a/credentials/3e7229b006c0f7c5"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cert-card cert-card-wide reveal reveal-delay-2"
+        >
+          <div class="cert-badge cert-azure">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Microsoft Certified: Azure Administrator Associate</h3>
+            <p class="cert-sub">Microsoft &middot; <span class="cert-view">View Credential ↗</span></p>
+          </div>
+        </a>
       </div>
 
       <div class="certs-credly reveal">
@@ -1065,6 +1119,22 @@ import Layout from '../layouts/Layout.astro';
   .cert-offensive { background: #fff7ed; color: #c2410c; }
   .cert-edu { background: #f5f3ff; color: #6d28d9; }
   .cert-ai { background: #ecfdf5; color: #059669; }
+  .cert-azure { background: #e6f0fb; color: #0078d4; }
+
+  .cert-view {
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  a.cert-card {
+    text-decoration: none;
+  }
+
+  a.cert-card:hover {
+    box-shadow: var(--shadow);
+    border-color: #0078d4;
+    transform: translateY(-3px);
+  }
 
   .cert-title {
     font-size: 1.05rem;
