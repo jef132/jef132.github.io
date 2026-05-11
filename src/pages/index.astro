@@ -1322,8 +1322,7 @@ import Layout from '../layouts/Layout.astro';
   const emailReveal = document.getElementById('emailReveal');
   const showEmailLabel = document.getElementById('showEmailLabel');
   showEmailBtn?.addEventListener('click', () => {
-    const parts = ['jef', '@', 'jeferyaldrich', '.com'];
-    emailReveal!.textContent = parts.join('');
+    emailReveal!.textContent = atob('amVmQGplZmVyeWFsZHJpY2guY29t');
     showEmailLabel!.textContent = 'Email Shown';
     showEmailBtn.setAttribute('aria-pressed', 'true');
   });
