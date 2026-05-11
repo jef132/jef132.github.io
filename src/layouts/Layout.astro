@@ -5,8 +5,8 @@ export interface Props {
 }
 
 const {
-  title = 'Jef Aldrich — Global IT Leader & AI Strategist',
-  description = 'Global IT Leader, AI & Cybersecurity Strategist at Intercontinental Exchange. CISSP, CISM, OSCP certified. Based in Atlanta, GA.',
+  title = 'Jef Aldrich — Global IT Leader, AI & Cybersecurity Strategist',
+  description = 'Jef Aldrich is a Global IT Leader and AI & Cybersecurity Strategist with 15+ years in financial services. CISSP, CISM, OSCP, and Azure certified. Specializes in Zero Trust, Cloud Identity, M&A integrations, and AI/ML. Based in Atlanta, GA.',
 } = Astro.props;
 ---
 
@@ -17,10 +17,15 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="author" content="Jef Aldrich" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Jef Aldrich, Global IT Leader, Cybersecurity, CISSP, CISM, OSCP, Azure, Zero Trust, Cloud Identity, AI, Machine Learning, MCP, OAuth, Office 365, M&A Integration, Financial Services, Atlanta" />
+    <link rel="canonical" href="https://www.jeferyaldrich.com" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.jeferyaldrich.com" />
+    <meta property="og:site_name" content="Jef Aldrich" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://www.jeferyaldrich.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -30,6 +35,22 @@ const {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://www.jeferyaldrich.com/og-image.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jef Aldrich",
+      "url": "https://www.jeferyaldrich.com",
+      "image": "https://www.jeferyaldrich.com/Headshot.jpg",
+      "jobTitle": "Global IT Leader & AI Strategist",
+      "worksFor": { "@type": "Organization", "name": "Intercontinental Exchange" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Atlanta", "addressRegion": "GA", "addressCountry": "US" },
+      "sameAs": [
+        "https://www.linkedin.com/in/jefa",
+        "https://github.com/jef132",
+        "https://www.credly.com/users/jef-aldrich/badges"
+      ],
+      "knowsAbout": ["Cybersecurity", "Zero Trust", "Cloud Identity", "AI", "Machine Learning", "Azure", "OAuth", "MCP", "Office 365", "M&A Integration", "Python", "LangChain"]
+    })} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
