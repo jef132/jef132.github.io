@@ -137,6 +137,14 @@ import Layout from '../layouts/Layout.astro';
           <span class="stat-number">6<span class="stat-plus">+</span></span>
           <span class="stat-label">Certifications</span>
         </div>
+        <div class="stat-card reveal reveal-delay-4">
+          <span class="stat-number">20<span class="stat-plus">+</span></span>
+          <span class="stat-label">Years in IT</span>
+        </div>
+        <div class="stat-card reveal reveal-delay-5">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Degrees &amp; Programs</span>
+        </div>
       </div>
     </div>
   </section>
@@ -840,7 +848,7 @@ import Layout from '../layouts/Layout.astro';
 
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
   }
 
@@ -891,7 +899,7 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 900px) {
     .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
