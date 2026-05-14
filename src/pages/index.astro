@@ -15,6 +15,7 @@ import Layout from '../layouts/Layout.astro';
           <li><a href="#about">About</a></li>
           <li><a href="#stats">By the Numbers</a></li>
           <li><a href="#writing">Writing</a></li>
+          <li><a href="#ai-work">Building with AI</a></li>
           <li><a href="#certifications">Credentials</a></li>
           <li><a href="#projects">Projects</a></li>
           <li>
@@ -203,6 +204,97 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BUILDING WITH AI ==================== -->
+  <section class="ai-section" id="ai-work">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Building with AI</p>
+        <h2 class="section-title">AI That Works for the Business</h2>
+        <p class="section-subtitle">
+          Production AI systems built to eliminate manual work, accelerate resolutions, and put intelligence where it counts.
+        </p>
+      </div>
+      <div class="ai-grid">
+
+        <div class="ai-card reveal reveal-delay-1">
+          <div class="ai-card-header">
+            <div class="ai-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="ai-status status-live">&#9679; In Production</span>
+          </div>
+          <h3 class="ai-card-title">ServiceNow AI Ticket Agent</h3>
+          <p class="ai-card-desc">
+            An autonomous Python agent that monitors the ServiceNow queue, analyzes ticket bodies with an on-prem LLM, and generates responses using skill files matched to each request type. Integrates a RAG knowledge base and executes tools for specific workflows — resolving tickets without human touch, or ensuring all required information is captured before engineer handoff.
+          </p>
+          <div class="ai-card-impact">
+            Reduces resolution time and eliminates back-and-forth information gathering before human escalation.
+          </div>
+          <div class="ai-card-stack">
+            <span class="ai-tag">Python</span>
+            <span class="ai-tag">RAG</span>
+            <span class="ai-tag">On-Prem LLM</span>
+            <span class="ai-tag">ServiceNow</span>
+            <span class="ai-tag">LangChain</span>
+          </div>
+        </div>
+
+        <div class="ai-card reveal reveal-delay-2">
+          <div class="ai-card-header">
+            <div class="ai-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span class="ai-status status-building">&#9678; Building</span>
+          </div>
+          <h3 class="ai-card-title">Teams AI Assistant</h3>
+          <p class="ai-card-desc">
+            An org-wide Microsoft Teams chatbot powered by the Microsoft Agent SDK, Azure AI Foundry, and Azure AI Search as a vector database. Uses hashtag-based routing to dynamically handle task categories — answering IT questions via RAG, querying ServiceNow for ticket status, and executing additional workflows — putting enterprise knowledge at every employee's fingertips.
+          </p>
+          <div class="ai-card-impact">
+            Brings self-service IT support directly into the tools employees already use every day.
+          </div>
+          <div class="ai-card-stack">
+            <span class="ai-tag">Microsoft Agent SDK</span>
+            <span class="ai-tag">Azure AI Foundry</span>
+            <span class="ai-tag">Azure AI Search</span>
+            <span class="ai-tag">RAG</span>
+            <span class="ai-tag">MS Teams</span>
+          </div>
+        </div>
+
+        <div class="ai-card reveal reveal-delay-3">
+          <div class="ai-card-header">
+            <div class="ai-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span class="ai-status status-live">&#9679; In Production</span>
+          </div>
+          <h3 class="ai-card-title">Software Vulnerability Assessment Agent</h3>
+          <p class="ai-card-desc">
+            Monitors the software request ticket queue, extracts the package name, and queries NIST NVD, CISA, and other vulnerability databases for recent CVEs. Findings are passed to an LLM with internal approval rules to generate an allow/deny recommendation. The full assessment report is written back to the ticket for human final review.
+          </p>
+          <div class="ai-card-impact">
+            Saves the security team hours of manual research every week on software approval requests.
+          </div>
+          <div class="ai-card-stack">
+            <span class="ai-tag">Python</span>
+            <span class="ai-tag">NIST NVD</span>
+            <span class="ai-tag">CISA</span>
+            <span class="ai-tag">LLM</span>
+            <span class="ai-tag">ServiceNow</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1099,6 +1191,131 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 680px) {
     .writing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ===== BUILDING WITH AI ===== */
+  .ai-section {
+    padding: var(--section-pad);
+    background: var(--gray-50);
+  }
+
+  .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .ai-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+  }
+
+  .ai-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--blue);
+    transform: translateY(-4px);
+  }
+
+  .ai-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ai-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ai-status {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 100px;
+  }
+
+  .status-live {
+    background: #ecfdf5;
+    color: #059669;
+  }
+
+  .status-building {
+    background: #eff6ff;
+    color: #2563eb;
+  }
+
+  .status-exploring {
+    background: #fff7ed;
+    color: #c2410c;
+  }
+
+  .ai-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+
+  .ai-card-desc {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    line-height: 1.75;
+    flex: 1;
+  }
+
+  .ai-card-impact {
+    background: #f0fdf4;
+    border-left: 3px solid #059669;
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    color: #065f46;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .ai-card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .ai-tag {
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--gray-200);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 900px) {
+    .ai-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .ai-grid {
       grid-template-columns: 1fr;
     }
   }
