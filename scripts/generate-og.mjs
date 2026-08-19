@@ -11,8 +11,8 @@ const circleMask = Buffer.from(
   </svg>`
 );
 
-const headshot = await sharp('./public/Headshot.jpg')
-  .resize(headshotSize, headshotSize, { position: 'top' })
+const headshot = await sharp('./public/NewHeadshot.jpg')
+  .resize(headshotSize, headshotSize)
   .composite([{ input: circleMask, blend: 'dest-in' }])
   .png()
   .toBuffer();
@@ -46,19 +46,23 @@ const card = `
   <rect x="108" y="215" width="480" height="3" rx="2" fill="#2563eb"/>
 
   <!-- Tagline line 1 -->
-  <text x="108" y="278" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400"
-    fill="rgba(255,255,255,0.8)">Global IT Leader · AI &amp; Cybersecurity Strategist</text>
+  <text x="108" y="272" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400"
+    fill="rgba(255,255,255,0.8)">Technology Leader | AI Transformation</text>
 
   <!-- Tagline line 2 -->
-  <text x="108" y="320" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400"
+  <text x="108" y="310" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400"
+    fill="rgba(255,255,255,0.8)">Cybersecurity Strategist</text>
+
+  <!-- Tagline line 3 -->
+  <text x="108" y="362" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400"
     fill="rgba(255,255,255,0.55)">Turning Emerging Technology into Enterprise Outcomes</text>
 
   <!-- Certifications row -->
-  <text x="108" y="420" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600"
+  <text x="108" y="440" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600"
     fill="rgba(255,255,255,0.4)" letter-spacing="2">CISSP · CISM · OSCP · AZURE CERTIFIED</text>
 
   <!-- Location -->
-  <text x="108" y="490" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500"
+  <text x="108" y="500" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500"
     fill="rgba(255,255,255,0.35)">Atlanta, GA · jeferyaldrich.com</text>
 
   <!-- Headshot placeholder circle (ring behind photo) -->

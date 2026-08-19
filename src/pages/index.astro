@@ -55,11 +55,12 @@ import Layout from '../layouts/Layout.astro';
       <div class="hero-image-wrap">
         <div class="hero-image-frame">
           <img
-            src="/Headshot.jpg"
+            src="/NewHeadshot.jpg"
             alt="Jef Aldrich — Technology Leader, AI Transformation & Cybersecurity Strategist"
             class="hero-image"
-            width="420"
-            height="420"
+            width="800"
+            height="800"
+            fetchpriority="high"
           />
         </div>
       </div>
@@ -954,7 +955,7 @@ import Layout from '../layouts/Layout.astro';
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
   }
 
   .hero-scroll-hint {
