@@ -23,7 +23,7 @@ const EMBED = 96; // 3x the 32px render size, keeps it crisp on high-DPI screens
 const embedded = await face(EMBED).jpeg({ quality: 84, optimize: true }).toBuffer();
 const b64 = embedded.toString('base64');
 
-// Plain href only — every browser that renders SVG favicons supports SVG2 href,
+// Plain href only. Every browser that renders SVG favicons supports SVG2 href,
 // and duplicating the payload into xlink:href would double the file size.
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <defs><clipPath id="c"><circle cx="16" cy="16" r="14"/></clipPath></defs>
