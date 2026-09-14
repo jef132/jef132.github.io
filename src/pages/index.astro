@@ -334,17 +334,18 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="ai-card-title">ServiceNow AI Ticket Agent</h3>
           <p class="ai-card-desc">
-            An autonomous Python agent that monitors the ServiceNow queue, analyzes ticket bodies with an on-prem LLM, and generates responses using skill files matched to each request type. Integrates a RAG knowledge base and executes tools for specific workflows, resolving tickets without human touch, or ensuring all required information is captured before engineer handoff.
+            An autonomous Python agent that works the IT service desk queue alongside human analysts across five teams. It polls ServiceNow assignment groups on a recurring schedule and, for each new ticket, uses an on-premises LLM to determine what the requester actually needs, then matches it against a library of 30+ skill files that define what the agent can answer and how. The response posts directly to the ticket as a work note within minutes. When nothing matches, it falls back to RAG search across the knowledge base. Skills go further than text: they execute PowerShell and Python automations such as access checks and enrollment workflows, or route the ticket to the team that owns it.
           </p>
           <div class="ai-card-impact">
-            Reduces resolution time and eliminates back-and-forth information gathering before human escalation.
+            Handles hundreds of tickets per week across five queues, turning first response from hours into minutes.
           </div>
           <div class="ai-card-stack">
             <span class="ai-tag">Python</span>
-            <span class="ai-tag">RAG</span>
             <span class="ai-tag">On-Prem LLM</span>
+            <span class="ai-tag">RAG</span>
             <span class="ai-tag">ServiceNow</span>
-            <span class="ai-tag">LangChain</span>
+            <span class="ai-tag">PowerShell</span>
+            <span class="ai-tag">SQLite</span>
           </div>
         </div>
 
