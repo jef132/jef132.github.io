@@ -358,19 +358,24 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <span class="ai-status status-building">&#9678; Building</span>
           </div>
-          <h3 class="ai-card-title">Teams AI Assistant</h3>
+          <h3 class="ai-card-title">Teams AI Agent</h3>
           <p class="ai-card-desc">
-            An org-wide Microsoft Teams chatbot powered by the Microsoft Agent SDK, Azure AI Foundry, and Azure AI Search as a vector database. Uses hashtag-based routing to dynamically handle task categories: answering IT questions via RAG, querying ServiceNow for ticket status, and executing additional workflows. The result puts enterprise knowledge at every employee's fingertips.
+            An org-wide AI agent built into Microsoft Teams on the Microsoft 365 Agents SDK, backed by an enterprise LLM gateway running Claude on AWS Bedrock. Employees chat with it naturally, and hashtags route a request to a specialized skill: #kb answers IT questions from the ServiceNow knowledge base using retrieval-augmented generation (RAG) with cited sources, #snow looks up live tickets, incidents, changes and servers in ServiceNow, and a built-in directory tool answers "who is..." questions from Entra ID. Its skill set is extensible without code: each hashtag skill can be an n8n workflow registered in a lookup table, so adding a capability means building the workflow and adding one row, with no source changes and no redeploy. Workflows can answer instantly or reply later through the agent's notification API, which also pushes Adaptive Card approvals, reminders and forms to users and captures their responses for downstream automation.
           </p>
           <div class="ai-card-impact">
-            Brings self-service IT support directly into the tools employees already use every day.
+            Brings self-service IT support and workflow automation directly into the tool employees already use every day.
           </div>
           <div class="ai-card-stack">
-            <span class="ai-tag">Microsoft Agent SDK</span>
-            <span class="ai-tag">Azure AI Foundry</span>
+            <span class="ai-tag">Microsoft 365 Agents SDK</span>
+            <span class="ai-tag">Claude / AWS Bedrock</span>
             <span class="ai-tag">Azure AI Search</span>
             <span class="ai-tag">RAG</span>
-            <span class="ai-tag">MS Teams</span>
+            <span class="ai-tag">n8n</span>
+            <span class="ai-tag">ServiceNow</span>
+            <span class="ai-tag">Microsoft Graph</span>
+            <span class="ai-tag">Adaptive Cards</span>
+            <span class="ai-tag">Azure App Service</span>
+            <span class="ai-tag">Python</span>
           </div>
         </div>
 
