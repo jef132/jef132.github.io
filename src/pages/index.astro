@@ -1727,8 +1727,76 @@ import Layout from '../layouts/Layout.astro';
   const emailReveal = document.getElementById('emailReveal');
   const showEmailLabel = document.getElementById('showEmailLabel');
   showEmailBtn?.addEventListener('click', () => {
+    if (showEmailBtn.getAttribute('aria-pressed') !== 'true') {
+      window.gtag?.('event', 'show_email');
+    }
     emailReveal!.textContent = atob('amVmQGplZmVyeWFsZHJpY2guY29t');
     showEmailLabel!.textContent = 'Email Shown';
     showEmailBtn.setAttribute('aria-pressed', 'true');
   });
+
+  // Analytics: which page area a link or section belongs to
+  function getLocation(el: Element): string {
+    const area = el.closest('header, footer, section');
+    if (!area) return 'other';
+    if (area.tagName === 'HEADER') return 'nav';
+    if (area.tagName === 'FOOTER') return 'footer';
+    if (area.classList.contains('hero')) return 'hero';
+    return area.id || 'other';
+  }
+
+  // Analytics: classify a link by where it points
+  function getLinkType(link: HTMLAnchorElement): string {
+    const href = link.getAttribute('href') || '';
+    if (href.startsWith('#')) return 'page_anchor';
+    const url = new URL(link.href);
+    if (url.hostname.endsWith('linkedin.com')) {
+      return url.pathname.startsWith('/in/') ? 'linkedin_profile' : 'linkedin_article';
+    }
+    if (url.hostname === 'github.com') {
+      return url.pathname.replace(/\/$/, '') === '/jef132' ? 'github_profile' : 'github_project';
+    }
+    if (url.hostname === 'learn.microsoft.com') return 'credential';
+    if (url.hostname.endsWith('credly.com')) return 'credly';
+    return 'other';
+  }
+
+  // Analytics: readable name for a link (icon links use aria-label, cards use their title)
+  function getLinkText(link: HTMLAnchorElement): string {
+    const text = link.getAttribute('aria-label') || link.querySelector('h3')?.textContent || link.textContent || '';
+    return text.replace(/\s+/g, ' ').trim().slice(0, 100);
+  }
+
+  // Analytics: label every link click with its type and location
+  document.addEventListener('click', (event) => {
+    const link = (event.target as Element | null)?.closest('a');
+    if (!link) return;
+    window.gtag?.('event', 'cta_click', {
+      link_type: getLinkType(link),
+      link_location: getLocation(link),
+      link_text: getLinkText(link),
+    });
+  });
+
+  // Analytics: record each section the first time it stays mid-screen for 1 second,
+  // so sections scrolled past on the way to a nav link are not counted
+  const sectionTimers = new Map<Element, number>();
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          clearTimeout(sectionTimers.get(entry.target));
+          sectionTimers.delete(entry.target);
+          return;
+        }
+        sectionTimers.set(entry.target, window.setTimeout(() => {
+          window.gtag?.('event', 'section_view', { section_name: entry.target.id });
+          sectionObserver.unobserve(entry.target);
+          sectionTimers.delete(entry.target);
+        }, 1000));
+      });
+    },
+    { rootMargin: '0px 0px -50% 0px' }
+  );
+  document.querySelectorAll('section[id]').forEach((el) => sectionObserver.observe(el));
 </script>
