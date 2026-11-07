@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://www.jeferyaldrich.com',
+  site: 'https://jeferyaldrich.com',
   output: 'static',
 });
